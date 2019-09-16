@@ -1,9 +1,3 @@
-from __future__ import print_function
-
-import findspark
-
-findspark.init()
-
 from pyspark.ml.linalg import Vectors
 from pyspark.ml.stat import Correlation
 from pyspark.sql import SparkSession

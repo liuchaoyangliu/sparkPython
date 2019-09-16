@@ -1,5 +1,3 @@
-import findspark
-findspark.init()
 
 from pyspark.ml import Pipeline
 from pyspark.ml.classification import LogisticRegression

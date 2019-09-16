@@ -1,5 +1,3 @@
-import findspark
-findspark.init()
 from pyspark.ml.feature import CountVectorizer, CountVectorizerModel
 from pyspark.sql import SparkSession
 
@@ -21,7 +19,7 @@ if __name__ == "__main__":
     # 适合语料库中的CountVectorizerModel。
     cv = CountVectorizer(inputCol="words", outputCol="features", vocabSize=3, minDF=2.0)
 
-    model: CountVectorizerModel = cv.fit(df)
+    model = cv.fit(df)
 
     result = model.transform(df)
     result.show(truncate=False)

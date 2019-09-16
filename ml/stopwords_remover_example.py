@@ -1,6 +1,3 @@
-import findspark
-findspark.init()
-
 
 from pyspark.ml.feature import StopWordsRemover
 from pyspark.sql import SparkSession

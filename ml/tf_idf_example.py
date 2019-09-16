@@ -1,8 +1,3 @@
-import findspark
-
-findspark.init()
-
-from __future__ import print_function
 
 from pyspark.ml.feature import HashingTF, IDF, Tokenizer
 from pyspark.sql import SparkSession

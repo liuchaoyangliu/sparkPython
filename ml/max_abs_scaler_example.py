@@ -1,6 +1,3 @@
-import findspark
-
-findspark.init()
 
 from __future__ import print_function
 

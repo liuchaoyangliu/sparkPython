@@ -1,9 +1,3 @@
-import findspark
-
-findspark.init()
-
-from __future__ import print_function
-
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import ChiSqSelector
 from pyspark.ml.linalg import Vectors

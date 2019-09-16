@@ -1,9 +1,3 @@
-import findspark
-
-findspark.init()
-
-from __future__ import print_function
-
 from pyspark.ml.feature import ElementwiseProduct
 from pyspark.ml.linalg import Vectors
 from pyspark.sql import SparkSession
