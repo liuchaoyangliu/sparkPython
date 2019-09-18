@@ -4,10 +4,8 @@ from pyspark.ml.linalg import Vectors
 from pyspark.sql import SparkSession
 
 if __name__ == "__main__":
-    spark = SparkSession\
-        .builder\
-        .appName("MinMaxScalerExample")\
-        .getOrCreate()
+
+    spark = SparkSession.builder.appName("MinMaxScalerExample").getOrCreate()
 
     dataFrame = spark.createDataFrame([
         (0, Vectors.dense([1.0, 0.1, -1.0]),),

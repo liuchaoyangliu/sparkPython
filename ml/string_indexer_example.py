@@ -1,12 +1,9 @@
-
 from pyspark.ml.feature import StringIndexer
 from pyspark.sql import SparkSession
 
 if __name__ == "__main__":
-    spark = SparkSession\
-        .builder\
-        .appName("StringIndexerExample")\
-        .getOrCreate()
+
+    spark = SparkSession.builder.appName("StringIndexerExample").getOrCreate()
 
     df = spark.createDataFrame(
         [(0, "a"), (1, "b"), (2, "c"), (3, "a"), (4, "a"), (5, "c")],
@@ -14,6 +11,7 @@ if __name__ == "__main__":
 
     indexer = StringIndexer(inputCol="category", outputCol="categoryIndex")
     indexed = indexer.fit(df).transform(df)
+
     indexed.show()
 
     spark.stop()
